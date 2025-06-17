@@ -27,10 +27,15 @@ This repository contains the **open-source core** of the project, including the 
 ## 📁 Project Structure
 
 skilldrill-core/
+
 ├── app/ # Flask application
+
 ├── templates/ # Jinja2 templates (HTML)
+
 ├── static/ # CSS, JS, Images
+
 ├── requirements.txt # Python dependencies
+
 └── README.md
 ## 📦 Setup Instructions
 
