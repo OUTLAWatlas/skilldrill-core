@@ -8,7 +8,7 @@ class Skilllab(db.Model):
     title = db.Column(db.String(150), nullable=False)
     description = db.Column(db.Text, nullable=False)
     difficulty = db.Column(db.String(50), nullable=False, default='Beginner')
-    created_at = db.Column(db.DateTime, nullable=False, default=datetime.utcownow)
+    created_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
 
     def to_dict(self):
         return {
