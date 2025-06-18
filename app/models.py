@@ -1,7 +1,7 @@
 from app import db
 from datetime import datetime
 
-class Skilllab(db.Model):
+class SkillLab(db.Model):
     __tablename__ = 'skill_labs'
 
     id = db.Column(db.Integer, primary_key=True)
