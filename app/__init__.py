@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
-import _mysql_connector
+import mysql.connector
 from dotenv import load_dotenv
 import os
  
@@ -13,7 +13,7 @@ def create_app():
 
 app = create_app()
 try:
-    app.db = _mysql_connector.connect(
+    app.db = mysql.connector.connect(
         host=os.getenv("DB_HOST"),
         user=os.getenv("DB_USER"),
         password=os.getenv('DB_PASSWORD'),
@@ -21,8 +21,6 @@ try:
     )
     print("Database Connection established")
 except mysql.connector.Error as e:
-    printf("Database Connection failed")
+    print("Database Connection failed")
 from .routes import main as main_blueprint
 app.register_blueprint(main_blueprint)
-
-return app
